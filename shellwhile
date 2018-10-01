@@ -1,0 +1,5 @@
+while ./a.out
+do
+  echo hello
+  date
+done

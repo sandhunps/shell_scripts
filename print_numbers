@@ -1,0 +1,7 @@
+i=0
+while test $i -ne 11
+do
+  echo $i
+  i=`expr $i '+' 1`
+done
+

@@ -1,0 +1,6 @@
+if (ifconfig | grep wlo1) > /dev/null
+then
+    echo 'net connection ok'
+else
+    echo 'net connection not ok'
+fi
