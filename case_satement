@@ -1,0 +1,41 @@
+# syntax of case statement
+# ----case expression in 
+#       pattern1)
+#           statements ;;
+#       pattern2)
+#           statements ;;
+#       ....
+#   esac
+
+# case statement first xpamda the  expression and tries to match aganist each pattern 
+#when a match is found all associated statments until the double semicolon(;;) are executed
+#after the first match , case statements terminates with the exit status of the  last command that eas executed.
+#if there is no match , exit status of case is zero
+
+
+
+
+echo 'enter number 1'
+read s1
+echo 'enter nuber 2'
+read s3
+echo 'enter case'
+read "s2"
+
+   case "$s2" 
+   in  
+     "+") ans=`expr $s1 + $s3` 
+          printf "%d %s %d = %d\n" $s1 $s2 $s3 $ans 
+         ;;
+     "-") ans=`expr $s1 - $s3` 
+          printf "%d %s %d = %d\n" $s1 $s2 $s3 $ans 
+         ;;
+     ""*"") ans=`expr $s1 \*  $s3` 
+          printf "%d %s %d = %d\n" $s1 $s2 $s3 $ans 
+         ;;
+     "/") ans=`expr $s1 / $s3` 
+          printf "%d %s %d = %d\n" $s1 $s2 $s3 $ans 
+         ;;
+       *) printf "Don't know how to do that.\n" 
+         ;;
+   esac 
