@@ -1,5 +1,13 @@
-while ./a.out
+#Write a script (call it "abc") which works like this:./abc 2 20
+#this will print all numbers from 2 to 20. The script should work with any two numbers, not just 2 and 20.
+
+
+
+
+a=$1
+while (test $a -le $2)
 do
-  echo hello
-  date
+ echo $a
+ a=`expr $a + 1`
 done
+
