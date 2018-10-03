@@ -1,0 +1,14 @@
+#a shell program to rename all files in a directory to lowecase names
+#the command line argument $1 is to enetr the directory path
+#file_name variable is assigined to the name of files in the directory one by one as the loop progresses
+#the 'tr' command is used to translate.here we use tr to translate from uppercase to lowercase
+
+
+
+cd $1
+for file_name in *
+do
+ echo $file_name
+ mv $file_name `echo $file_name |tr "[A-Z]" "[a-z]"`
+done
+
